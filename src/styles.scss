@@ -1,1 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+    box-sizing: border-box;
+    text-align: unset !important;
+}
+a {
+    text-decoration: unset !important;
+    color: unset;
+}
+.slider {
+    .owl-carousel {
+        .owl-item {
+            opacity: 0;
+        }
+        .active {
+            box-shadow: 6px 20px 47px black;
+         
+            transform: skew(10deg) scale(0.7);
+            opacity: 0.7;
+            transition: all 0.5s ease-in;
+
+            img {
+                width: 400px !important;
+                height: 400px !important;
+                overflow: hidden;
+            }
+        }
+        .center {
+            opacity: 1;
+            transform: scale(1.5);
+        }
+    }
+}
