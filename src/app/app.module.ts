@@ -14,6 +14,11 @@ import { SignInComponent } from './sign-in/sign-in.component';
 import { RegisterComponent } from './register/register.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { HttpClientModule } from '@angular/common/http';
+import { NgChartsModule } from 'ng2-charts';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { VoteChartComponent } from './vote-chart/vote-chart.component';
+import { MatIconModule } from '@angular/material/icon';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,14 +30,18 @@ import { HttpClientModule } from '@angular/common/http';
     ContactUsComponent,
     SignInComponent,
     RegisterComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    VoteChartComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CarouselModule ,
-HttpClientModule,
-    BrowserAnimationsModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    NgChartsModule,
+    MatProgressBarModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

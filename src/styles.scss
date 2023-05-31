@@ -3,31 +3,41 @@
     box-sizing: border-box;
     text-align: unset !important;
 }
+body{
+    background-image: url(assets/imges/Pana.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
 a {
     text-decoration: unset !important;
     color: unset;
 }
 .slider {
     .owl-carousel {
+        .owl-stage-outer{
+            overflow: visible;
+        }
         .owl-item {
             opacity: 0;
         }
         .active {
             box-shadow: 6px 20px 47px black;
          
-            transform: skew(10deg) scale(0.7);
+            transform: skew(10deg) scale(0.9);
             opacity: 0.7;
             transition: all 0.5s ease-in;
 
             img {
-                width: 400px !important;
-                height: 400px !important;
                 overflow: hidden;
+            object-fit: fill;
+
             }
         }
         .center {
             opacity: 1;
-            transform: scale(1.5);
+            transform: scale(1.2);
         }
     }
 }

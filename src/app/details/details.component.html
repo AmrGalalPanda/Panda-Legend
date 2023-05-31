@@ -1,1 +1,18 @@
 <p>details works!</p>
+<div class="container">
+    <div class="row gx-0 ">
+        <div *ngFor="let move of moveDetails" class="col-md-3 data ">
+          
+            <h2 class="title">
+                {{move.title}}
+            </h2>
+            <img class="img-fluid w-100" [src]="'https://image.tmdb.org/t/p/w500'+move.poster_path" alt="">
+            <p class="descr">
+                {{move.overview}}
+            </p>
+  <app-vote-chart class=" rate" [voteCount]="move.vote_average"
+                [maxVotes]="10">{{move.vote_average}}</app-vote-chart>
+
+        </div>
+    </div>
+</div>

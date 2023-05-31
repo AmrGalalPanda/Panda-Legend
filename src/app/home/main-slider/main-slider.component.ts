@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
-
+import { MoviesService } from 'src/app/movies.service';
 @Component({
   selector: 'app-main-slider',
   templateUrl: './main-slider.component.html',
@@ -9,7 +9,7 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 export class MainSliderComponent {
   customOptions: OwlOptions = {
     loop: true,
-    margin: 10,
+    margin: 0,
     center: true,
     dots: false,
     responsive: {
@@ -20,8 +20,16 @@ export class MainSliderComponent {
         items: 3
       },
       1000: {
-        items: 3
+        items: 5
       }
     }
   };
+  
+  tandingMove:any[] =[]
+constructor(private _MoviesService:MoviesService)
+{
+  _MoviesService.getTrending().subscribe((data)=>{
+    this.tandingMove =data.results
+  })
+}
 }
