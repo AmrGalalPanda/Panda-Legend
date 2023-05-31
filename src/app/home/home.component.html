@@ -1,2 +1,9 @@
-<p>home works!</p>
 <app-main-slider></app-main-slider>
+<div class="row">
+    <div *ngFor="let move of tandingMove" class="col-md-3">
+        <h2>
+            {{move.title}}
+        </h2>
+
+    </div>
+</div>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MoviesService } from '../movies.service';
 
 @Component({
   selector: 'app-home',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-
+  tandingMove:any[] =[]
+constructor(private _MoviesService:MoviesService)
+{
+  _MoviesService.getTrending().subscribe((data)=>{
+    this.tandingMove =data.results
+  })
+}
 }
