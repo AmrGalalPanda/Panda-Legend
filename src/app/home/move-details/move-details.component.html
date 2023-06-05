@@ -1,16 +1,16 @@
 <div class="container">
     <div class="row gx-0 ">
-        <div *ngFor="let movieDetials of movieDetials" class="col-md-3 data ">
-            <a [routerLink]='["/moveDetails",movieDetials.id]'>
+        <div *ngFor="let move of movieDetials" class="col-md-3 data ">
+            <a [routerLink]='["/moveDetails",move.id]'>
                 <h2 class="title">
-                    {{movieDetials.original_title}}
+                    {{move.original_title}}
                 </h2>
-                <img class="img-fluid w-100" [src]="'https://image.tmdb.org/t/p/w500'+movieDetials.poster_path" alt="">
+                <img class="img-fluid w-100" [src]="'https://image.tmdb.org/t/p/w500'+move.poster_path" alt="">
                 <p class="descr">
-                    {{movieDetials.id}}
+                    {{move.id}}
                 </p>
-                <app-vote-chart class=" rate" [voteCount]="movieDetials.vote_average"
-                    [maxVotes]="10">{{movieDetials.vote_average}}</app-vote-chart>
+                <app-vote-chart class=" rate" [voteCount]="move.vote_average"
+                    [maxVotes]="10">{{move.vote_average}}</app-vote-chart>
             </a>
         </div>
     </div>
