@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="row gx-0 ">
+        <div *ngFor="let movieDetials of movieDetials" class="col-md-3 data ">
+            <a [routerLink]='["/moveDetails",movieDetials.id]'>
+                <h2 class="title">
+                    {{movieDetials.original_title}}
+                </h2>
+                <img class="img-fluid w-100" [src]="'https://image.tmdb.org/t/p/w500'+movieDetials.poster_path" alt="">
+                <p class="descr">
+                    {{movieDetials.id}}
+                </p>
+                <app-vote-chart class=" rate" [voteCount]="movieDetials.vote_average"
+                    [maxVotes]="10">{{movieDetials.vote_average}}</app-vote-chart>
+            </a>
+        </div>
+    </div>
+</div>

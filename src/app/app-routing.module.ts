@@ -7,7 +7,7 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { RegisterComponent } from './register/register.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-
+import { MoveDetailsComponent } from './home/move-details/move-details.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
@@ -16,6 +16,7 @@ const routes: Routes = [
   { path: 'contactUS', component: ContactUsComponent },
   { path: 'sign-in', component: SignInComponent },
   { path: 'register', component: RegisterComponent },
+  { path: 'moveDetails/:id', component: MoveDetailsComponent},
   { path: '**', component: NotFoundComponent },
 ];
 

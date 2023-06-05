@@ -11,5 +11,8 @@ export class MoviesService {
     {
       return this._HttpClient.get('https://api.themoviedb.org/3/movie/now_playing?api_key=eba8b9a7199efdcb0ca1f96879b83c44&fbclid=IwAR32Px4_3ZTHYF-tjdSOdkN82Esd5XSCl7c0ueF0LR8urOnlJBZ4TJJdf_k')
     }
-  
+      getMoveDetails():Observable<any>
+    {
+      return this._HttpClient.get('https://api.themoviedb.org/3/movie/502356?api_key=eba8b9a7199efdcb0ca1f96879b83c44&fbclid=IwAR32Px4_3ZTHYF-tjdSOdkN82Esd5XSCl7c0ueF0LR8urOnlJBZ4TJJdf_k')
+    }
 }

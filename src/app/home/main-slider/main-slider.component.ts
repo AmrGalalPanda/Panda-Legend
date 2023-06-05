@@ -12,6 +12,9 @@ export class MainSliderComponent {
     margin: 0,
     center: true,
     dots: false,
+    autoplay:true,
+    navSpeed:1,
+
     responsive: {
       0: {
         items: 1

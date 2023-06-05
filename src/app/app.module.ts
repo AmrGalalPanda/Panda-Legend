@@ -18,6 +18,7 @@ import { NgChartsModule } from 'ng2-charts';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { VoteChartComponent } from './vote-chart/vote-chart.component';
 import { MatIconModule } from '@angular/material/icon';
+import { MoveDetailsComponent } from './home/move-details/move-details.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { MatIconModule } from '@angular/material/icon';
     SignInComponent,
     RegisterComponent,
     NotFoundComponent,
-    VoteChartComponent
+    VoteChartComponent,
+    MoveDetailsComponent
   ],
   imports: [
     BrowserModule,

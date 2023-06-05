@@ -1,13 +1,23 @@
 #navsTop {
     top: 0;
     width: 100%;
-    background-color: transparent;
+    background-color: unset ;
     transition: background-color 0.3s ease;
     z-index: 999;
+
+    a {
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+    }
 }
 
 .scrolled {
     position: fixed;
-    background-color: #333 !important; /* Change to your desired background color */
+    background-color: white !important; /* Change to your desired background color */
+    a {
+        color: black !important;
+        font-size: 18px;
+        font-weight: bold;
+    }
 }
-
