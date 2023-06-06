@@ -39,10 +39,9 @@
         overflow: hidden;
     }
     .rate {
-       
+       display: flex;
         background-color: black !important;
         color: white !important;
-        padding: 5px;
         p {
             margin: 0 !important;
         }

@@ -4,9 +4,9 @@
         <div *ngFor="let move of tandingMove" class="col-md-3 data ">
             <a [routerLink]='["/moveDetails",move.id]'>
                 <h2 class="title">
-                    {{move.title}}
+                    {{move.title|uppercase}}
                 </h2>
-                <img class="img-fluid w-100" [src]="'https://image.tmdb.org/t/p/w500'+move.poster_path" alt="">
+                <img class="img-fluid w-100" [src]="imgPrefix+move.poster_path" alt="">
                 <p class="descr">
                     {{move.overview}}
                 </p>

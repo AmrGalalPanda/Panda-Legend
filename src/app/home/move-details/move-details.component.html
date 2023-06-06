@@ -1,17 +1,22 @@
 <div class="container">
-    <div class="row gx-0 ">
-        <div *ngFor="let move of movieDetials" class="col-md-3 data ">
-            <a [routerLink]='["/moveDetails",move.id]'>
-                <h2 class="title">
-                    {{move.original_title}}
-                </h2>
-                <img class="img-fluid w-100" [src]="'https://image.tmdb.org/t/p/w500'+move.poster_path" alt="">
-                <p class="descr">
-                    {{move.id}}
-                </p>
-                <app-vote-chart class=" rate" [voteCount]="move.vote_average"
-                    [maxVotes]="10">{{move.vote_average}}</app-vote-chart>
-            </a>
+    <div class="row gx-0 justify-content-between align-items-center">
+        <div class="col-4">
+            <img class="img-fluid w-100" [src]="imgPrefix+movieDetials.poster_path" alt="">
+
+        </div>
+        <div class="col-6 align-content-center align-items-center">
+            <h2 class="title pb-3">
+                {{movieDetials.original_title|uppercase}}
+            </h2>  
+            <p class="descr pb-3">
+                {{movieDetials.overview}}
+            </p>
+            
+            <p class="descr pb-1 mb-1">
+                vote count  :  {{movieDetials.vote_count}}
+            </p>
+            <p class="d-flex">votes : <app-vote-chart class=" rate" [voteCount]="movieDetials.vote_average"
+                [maxVotes]="10"></app-vote-chart></p>
         </div>
     </div>
 </div>

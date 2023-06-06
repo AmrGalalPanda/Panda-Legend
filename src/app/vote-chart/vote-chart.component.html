@@ -1,7 +1,7 @@
-<div class="star-rating">
+<div class="star-rating d-flex align-content-center">
+  <span class="px-2 numRate"> {{ voteCount }} </span>
     <ng-container *ngFor="let star of getStarRating(); let i = index">
         <mat-icon color="primary" fontSize="large"><i class="fa-solid fa-star"></i></mat-icon>
     </ng-container>
   </div>
-  <p>{{ voteCount }} votes</p>
   

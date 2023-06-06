@@ -3,11 +3,11 @@
     box-sizing: border-box;
     text-align: unset !important;
 }
-body{
-/*     background-image: url(assets/imges/Pana.png);
+body {
+    /*     background-image: url(assets/imges/Pana.png);
  */
-background-color: black;
- background-size: cover;
+    background-color: black;
+    background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -18,7 +18,7 @@ a {
 }
 .slider {
     .owl-carousel {
-        .owl-stage-outer{
+        .owl-stage-outer {
             overflow: visible;
         }
         .owl-item {
@@ -26,15 +26,14 @@ a {
         }
         .active {
             box-shadow: 6px 20px 47px black;
-         
+
             transform: skew(10deg) scale(0.9);
             opacity: 0.7;
             transition: all 0.5s ease-in;
 
             img {
                 overflow: hidden;
-            object-fit: fill;
-
+                object-fit: fill;
             }
         }
         .center {
@@ -42,4 +41,27 @@ a {
             transform: scale(1.2);
         }
     }
+}
+app-home {
+    mat-icon {
+        display: none !important;
+       
+    } .numRate {
+            position: absolute;
+            top: 0%;
+            right: 10px;
+            background-color: rgb(0, 174, 255);
+            padding: 5px 10px !important;
+        }
+        .data:hover
+        {
+            .numRate {
+                position: absolute;
+                top: unset;
+                bottom:  0%;
+                right: 10px;
+                transition: all 1s all;
+                
+            }
+        }
 }

@@ -6,13 +6,18 @@ import { Observable } from 'rxjs';
 })
 export class MoviesService {
 
-  constructor(private _HttpClient:HttpClient) { }
-    getTrending():Observable<any>
-    {
-      return this._HttpClient.get('https://api.themoviedb.org/3/movie/now_playing?api_key=eba8b9a7199efdcb0ca1f96879b83c44&fbclid=IwAR32Px4_3ZTHYF-tjdSOdkN82Esd5XSCl7c0ueF0LR8urOnlJBZ4TJJdf_k')
-    }
-      getMoveDetails():Observable<any>
-    {
-      return this._HttpClient.get('https://api.themoviedb.org/3/movie/502356?api_key=eba8b9a7199efdcb0ca1f96879b83c44&fbclid=IwAR32Px4_3ZTHYF-tjdSOdkN82Esd5XSCl7c0ueF0LR8urOnlJBZ4TJJdf_k')
-    }
+  constructor(private _HttpClient: HttpClient) { }
+  getTrending(): Observable<any> {
+    return this._HttpClient.get('https://api.themoviedb.org/3/trending/movie/day?api_key=eba8b9a7199efdcb0ca1f96879b83c44&fbclid=IwAR32Px4_3ZTHYF-tjdSOdkN82Esd5XSCl7c0ueF0LR8urOnlJBZ4TJJdf_k')
+  }
+  getAllMovie(): Observable<any> {
+    return this._HttpClient.get('https://api.themoviedb.org/3/movie/now_playing?api_key=eba8b9a7199efdcb0ca1f96879b83c44&fbclid=IwAR32Px4_3ZTHYF-tjdSOdkN82Esd5XSCl7c0ueF0LR8urOnlJBZ4TJJdf_k')
+
+  }
+  getMoveDetails(id: string): Observable<any> {
+    return this._HttpClient.get(`https://api.themoviedb.org/3/movie/${id}?api_key=eba8b9a7199efdcb0ca1f96879b83c44&fbclid=IwAR32Px4_3ZTHYF-tjdSOdkN82Esd5XSCl7c0ueF0LR8urOnlJBZ4TJJdf_k`)
+  }
+  getMovePagnition(pagnumber: number): Observable<any> {
+    return this._HttpClient.get(`https://api.themoviedb.org/3/discover/movie?api_key=eba8b9a7199efdcb0ca1f96879b83c44&fbclid=IwAR32Px4_3ZTHYF-tjdSOdkN82Esd5XSCl7c0ueF0LR8urOnlJBZ4TJJdf_k?include_adult=false&include_video=false&language=en-US&page=${pagnumber}&sort_by=popularity.desc`)
+  }
 }
