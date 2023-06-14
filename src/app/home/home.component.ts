@@ -8,12 +8,19 @@ import { VoteChartComponent } from '../vote-chart/vote-chart.component';
 })
 export class HomeComponent {
   vote_averag: number[] = [];
-  tandingMove: any[] = []
+  tandingMove: any[] = [];
+  pages:number[]=[];
   imgPrefix:string='https://image.tmdb.org/t/p/w500';
 
-  constructor(private _MoviesService: MoviesService) {
-    _MoviesService.getAllMovie().subscribe((data) => {
+  constructor(private _MoviesService: MoviesService) {}
+  ngOnInit(): void {
+    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+    //Add 'implements OnInit' to the class.
+   this.pages=new Array(10).fill(0).map((x,i)=>i);
+    this._MoviesService.getMovePagnition(1).subscribe((data) => {
       this.tandingMove = data.results
     })
+    
   }
+   
 }
